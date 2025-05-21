@@ -21,10 +21,14 @@ public class Game {
 	@Column(name = "game_year")		/*year é uma palavra reservada do SQL, esse comando muda o nome no banco*/
 	private Integer year;
 	private String genre;
-	private String platform;
+	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT") /*Permite textos maiores no banco de dados*/
 	private String shortDescription;
+		
+	@Column(columnDefinition = "TEXT") /*Permite textos maiores no banco de dados*/
 	private String longDescription;
 	
 	public Game() {
@@ -38,7 +42,7 @@ public class Game {
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.platform = platform;
+		this.platforms = platform;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -78,11 +82,11 @@ public class Game {
 	}
 
 	public String getPlatform() {
-		return platform;
+		return platforms;
 	}
 
-	public void setPlatform(String platform) {
-		this.platform = platform;
+	public void setPlatform(String platforms) {
+		this.platforms = platforms;
 	}
 
 	public Double getScore() {
