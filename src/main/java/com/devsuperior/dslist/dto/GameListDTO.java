@@ -12,19 +12,16 @@ public class GameListDTO {
 	}
 
 	public GameListDTO(GameList entity) {
-		super();
 		id = entity.getId();
 		name = entity.getName();
 	}
 
 	public Long getId() {
 		return id;
-	}
+	} 
 
 	public String getName() {
 		return name;
 	}
 	
-	
-
 }
